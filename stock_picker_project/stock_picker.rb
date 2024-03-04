@@ -4,7 +4,7 @@ def stock_picker(array)
   last = array.length-1
   ans = []
 
-  until left == last do
+  until left >= last do
     if ans.empty? || array[right] - array[left] > array[ans.last] - array[ans.first]
       ans = [left, right]
     end

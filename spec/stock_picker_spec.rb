@@ -26,5 +26,13 @@ RSpec.describe 'Stock Picker' do
         expect(stock_picker(stocks)).to eq( [7,8] )
       end
     end
+
+    context 'no stocks' do
+      let(:stocks) { [] }
+
+      it 'returns empty array' do
+        expect(stock_picker(stocks)).to eq( [] )
+      end
+    end
   end
 end
